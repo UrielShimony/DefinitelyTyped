@@ -85,6 +85,7 @@ declare namespace google.maps {
     interface DirectionsResult {
         geocoded_waypoints: DirectionsGeocodedWaypoint[];
         routes: DirectionsRoute[];
+        DirectionsStatus?:DirectionsStatus
     }
 
     class DirectionsRenderer extends MVCObject {
@@ -220,10 +221,10 @@ declare namespace google.maps {
         distance: Distance;
         duration: Duration;
         end_location: LatLng;
-        instructions: string;
+        html_instructions: string;
         path: LatLng[];
         start_location: LatLng;
-        transit: TransitDetails;
+        transit_details: TransitDetails;
         travel_mode: TravelMode;
     }
 
